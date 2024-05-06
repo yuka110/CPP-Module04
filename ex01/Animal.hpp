@@ -6,7 +6,7 @@
 /*   By: yitoh <yitoh@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2024/04/29 16:06:58 by yitoh         #+#    #+#                 */
-/*   Updated: 2024/05/06 17:03:47 by yitoh         ########   odam.nl         */
+/*   Updated: 2024/05/06 17:03:58 by yitoh         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,16 @@
 
 #include <iostream>
 #include <string>
+
+#define BOLD_TEXT "\033[1m"
+#define RESET "\033[0m"
+#define RED "\033[31m"
+#define GREEN "\033[32m"
+#define YELLOW "\033[33m"
+#define BLUE "\033[34m"
+#define MAGENTA "\033[35m"
+#define CYAN "\033[36m"
+#define WHITE "\033[37m"
 
 class Animal
 {

@@ -1,32 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   Animal.hpp                                         :+:    :+:            */
+/*   Brain.cpp                                          :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: yitoh <yitoh@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2024/04/29 16:06:58 by yitoh         #+#    #+#                 */
-/*   Updated: 2024/05/06 17:03:47 by yitoh         ########   odam.nl         */
+/*   Created: 2024/05/02 17:19:52 by yitoh         #+#    #+#                 */
+/*   Updated: 2024/05/06 17:03:21 by yitoh         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ANIMAL_HPP
-# define ANIMAL_HPP
+#include "Brain.hpp"
 
-#include <iostream>
-#include <string>
-
-class Animal
+Brain::Brain()
 {
-protected:
-    std::string _type;
+    std::cout << "Brain is constructed" << std::endl;
+}
 
-public:
-    Animal();
-    virtual ~Animal();
-    std::string getType() const;
-    void setType(std::string type);
-    virtual void makeSound() const;
-};
+Brain::~Brain()
+{
+    std::cout << "Brain is destructed" << std::endl;
+}
 
-#endif
+void Brain::set_ideas(std::string s)
+{
+    _ideas[0] = s;
+    std::cout << BLUE << "My idea is: " << _ideas[0] << RESET << std::endl;
+}
+
+std::string* Brain::get_ideas()
+{
+    return (_ideas);
+}

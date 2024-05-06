@@ -1,32 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   Animal.hpp                                         :+:    :+:            */
+/*   WrongCat.cpp                                       :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: yitoh <yitoh@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2024/04/29 16:06:58 by yitoh         #+#    #+#                 */
-/*   Updated: 2024/05/06 17:03:47 by yitoh         ########   odam.nl         */
+/*   Created: 2024/05/02 16:15:26 by yitoh         #+#    #+#                 */
+/*   Updated: 2024/05/06 17:35:56 by yitoh         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ANIMAL_HPP
-# define ANIMAL_HPP
+#include "WrongCat.hpp"
 
-#include <iostream>
-#include <string>
+WrongCat::WrongCat(){
+    setType("WrongCat");
+    std::cout << "WrongCat is constructed" << std::endl;
+}
 
-class Animal
-{
-protected:
-    std::string _type;
+WrongCat::~WrongCat(){
+    std::cout <<_type << " is destructed" << std::endl;
+}
 
-public:
-    Animal();
-    virtual ~Animal();
-    std::string getType() const;
-    void setType(std::string type);
-    virtual void makeSound() const;
-};
-
-#endif
+void WrongCat::makeSound() const{
+    std::cout << "well... I am not a cat" << std::endl;
+}

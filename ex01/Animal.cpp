@@ -1,39 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   WrongAnimal.cpp                                    :+:    :+:            */
+/*   Animal.cpp                                         :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: yitoh <yitoh@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2024/05/02 16:12:55 by yitoh         #+#    #+#                 */
-/*   Updated: 2024/05/06 17:33:45 by yitoh         ########   odam.nl         */
+/*   Created: 2024/04/29 16:06:45 by yitoh         #+#    #+#                 */
+/*   Updated: 2024/05/06 17:36:57 by yitoh         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "WrongAnimal.hpp"
+#include "Animal.hpp"
 
-WrongAnimal::WrongAnimal()
+Animal::Animal()
 {
-    _type = "WrongAnimal";
-    std::cout << "WrongAnimal is constructed" << std::endl;
+    _type = "Animal";
+    std::cout << "Animal is constructed" << std::endl;
 }
 
-WrongAnimal::~WrongAnimal()
+Animal::~Animal()
 {
-    std::cout << _type << " is destructed" << std::endl;
+    std::cout <<"Animal is destructed" << std::endl;
 }
 
-void WrongAnimal::setType(std::string type)
+void Animal::setType(std::string type)
 {
     _type = type;
 }
 
-std::string WrongAnimal::getType() const
+std::string Animal::getType() const
 {
     return (_type);
 }
 
-void WrongAnimal::makeSound() const
+void Animal::makeSound() const
 {
-    std::cout << "My existence is WRONG" << std::endl;
+    std::cout << "meh.. I don't make any sounds" << std::endl;
 }
+

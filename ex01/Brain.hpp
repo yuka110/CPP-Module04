@@ -1,32 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   Animal.hpp                                         :+:    :+:            */
+/*   Brain.hpp                                          :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: yitoh <yitoh@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2024/04/29 16:06:58 by yitoh         #+#    #+#                 */
-/*   Updated: 2024/05/06 17:03:47 by yitoh         ########   odam.nl         */
+/*   Created: 2024/05/02 17:19:54 by yitoh         #+#    #+#                 */
+/*   Updated: 2024/05/06 17:03:13 by yitoh         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ANIMAL_HPP
-# define ANIMAL_HPP
+#ifndef BRAIN_HPP
+# define BRAIN_HPP
 
 #include <iostream>
 #include <string>
+#include "Animal.hpp"
 
-class Animal
+class Brain
 {
-protected:
-    std::string _type;
-
+private:
+    std::string _ideas[100];
 public:
-    Animal();
-    virtual ~Animal();
-    std::string getType() const;
-    void setType(std::string type);
-    virtual void makeSound() const;
+    Brain();
+    Brain(Brain &copy);
+    ~Brain();
+    void set_ideas(std::string s);
+    std::string* get_ideas();
 };
 
 #endif

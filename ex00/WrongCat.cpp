@@ -6,7 +6,7 @@
 /*   By: yitoh <yitoh@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2024/05/02 16:15:26 by yitoh         #+#    #+#                 */
-/*   Updated: 2024/05/02 16:15:29 by yitoh         ########   odam.nl         */
+/*   Updated: 2024/05/06 17:34:03 by yitoh         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@ WrongCat::WrongCat(){
 }
 
 WrongCat::~WrongCat(){
-    std::cout << "WrongCat is destructed" << std::endl;
+    std::cout << _type << " is destructed" << std::endl;
 }
 
 void WrongCat::makeSound() const{
-    std::cout << "Meawwwww..." << std::endl;
+    std::cout << "well... I am not a cat" << std::endl;
 }
